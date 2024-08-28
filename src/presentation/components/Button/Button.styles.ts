@@ -70,7 +70,7 @@ const Secondary = styled.button<IButtonProps>`
 `;
 
 const Tertiary = styled.button<IButtonProps>`
-  color: ${({ theme }) => theme.colors?.neutral['black']};
+  color: ${({ theme }) => theme.colors?.secondary['blue']};
   font-size: ${({ $fontSize }) => $fontSize || '1rem'};
   font-style: normal;
   font-weight: 700;
