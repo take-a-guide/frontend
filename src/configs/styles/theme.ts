@@ -10,13 +10,13 @@ export const theme = {
       '01': '#5AFFF3',
       red: '#ff0000',
       green: '#1acc5f',
+      blue: '#0F2B54',
     },
     neutral: {
       white: '#FFF',
-      'grey-1': '#E7E7E7',
-      'grey-2': '#C6C6C6',
+      'gray-1': '#E7E7E7',
+      'gray-2': '#C6C6C6',
       black: '#000',
-      bottom: '#211D28',
     },
     gradient: {
       title: ` linear-gradient(135deg, #56cfe1 5%, #45bfbd 47.53%, #6affdb 83.33%)`,

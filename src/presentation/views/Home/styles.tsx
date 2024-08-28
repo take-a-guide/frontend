@@ -3,6 +3,7 @@ import { roboto } from '@/configs/styles/globalStyles';
 
 const Container = styled.div`
   width: 100vw;
+  overflow-y: scroll;
   display: flex;
   flex-direction: column;
   align-items: center;

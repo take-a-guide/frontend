@@ -11,6 +11,7 @@ const Content = styled.div`
   justify-content: space-between;
   align-items: center;
   max-width: 1248px;
+  padding: 0 1rem;
   height: 5rem;
   margin: 0 auto;
 `;

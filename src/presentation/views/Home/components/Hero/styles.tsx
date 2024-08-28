@@ -1,8 +1,10 @@
 import styled from '@emotion/styled';
 import { roboto } from '@/configs/styles/globalStyles';
+import Image from 'next/image';
 
 const Container = styled.div`
   width: 100vw;
+  height: calc(100dvh - 5rem);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,37 +13,11 @@ const Container = styled.div`
   background: ${({ theme }) => theme.colors.primary['01']};
 `;
 
-const Content = styled.div`
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 5rem;
-`;
-
-const ValidateAddress = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: flex-start;
-  justify-content: center;
-  max-width: 20rem;
-
-  button {
-    width: 100%;
-  }
-`;
-
-const ButtonsContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: flex-start;
-  justify-content: center;
-
-  > div {
-    display: flex;
-    gap: 1rem;
-  }
+const TripCoupleImage = styled(Image)`
+  max-width: 550px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 `;
 
 const Title = styled.h1`
@@ -51,8 +27,6 @@ const Title = styled.h1`
 
 export const HeroStyles = {
   Container,
-  Content,
+  TripCoupleImage,
   Title,
-  ValidateAddress,
-  ButtonsContainer,
 };
