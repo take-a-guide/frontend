@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { roboto } from '@/configs/styles/globalStyles';
 
 interface IInputStyleProps {
   $width?: string;
@@ -10,7 +11,21 @@ interface IInputStyleProps {
   $padding?: string;
 }
 
-const Container = styled.input<IInputStyleProps>`
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  gap: 0.5rem;
+
+  > span {
+    color: ${({ theme }) => theme.colors.secondary['red']};
+    font-size: 0.75rem;
+  }
+`;
+
+const Input = styled.input<IInputStyleProps>`
   width: ${({ $width }) => $width || '100%'};
   padding: ${({ $padding }) => $padding || '1rem 0.5rem'};
   height: ${({ $height }) => $height};
@@ -20,9 +35,10 @@ const Container = styled.input<IInputStyleProps>`
     ${({ $borderColor, theme }) =>
       $borderColor || theme.colors.neutral['gray-1']};
   border-radius: ${({ $borderRadius }) => $borderRadius || '0.25rem'};
+  font-family: ${roboto};
 
   &:hover {
-    cursor: pointer;
+    cursor: ${({ type }) => (type === 'date' ? 'pointer' : 'text')};
   }
 
   &:focus {
@@ -32,4 +48,5 @@ const Container = styled.input<IInputStyleProps>`
 
 export const InputStyles = {
   Container,
+  Input,
 };

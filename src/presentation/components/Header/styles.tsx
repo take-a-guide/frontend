@@ -25,7 +25,7 @@ const TagLogo = styled(Image)`
 const ItemsContainer = styled.div`
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.5rem;
   align-items: center;
 `;
 
@@ -38,7 +38,7 @@ const ButtonsContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.5rem;
   margin-left: 1rem;
 `;
 

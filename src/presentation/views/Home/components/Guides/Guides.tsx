@@ -1,3 +1,3 @@
 export const Guides: React.FC = () => {
-  return <>Guides</>;
+  return <div style={{ height: '100vh' }}>Guides</div>;
 };
