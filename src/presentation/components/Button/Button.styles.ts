@@ -18,7 +18,7 @@ const Primary = styled.button<IButtonProps>`
   white-space: nowrap;
   display: flex;
   width: ${({ $width }) => $width || '11.75rem'};
-  height: ${({ $height }) => $height || '2.5rem'};
+  height: ${({ $height }) => $height || '2.75rem'};
   padding: 0.5rem;
   justify-content: center;
   align-items: center;
@@ -40,20 +40,20 @@ const Primary = styled.button<IButtonProps>`
 `;
 
 const Secondary = styled.button<IButtonProps>`
-  color: ${({ theme }) => theme.colors?.primary['01']};
+  color: ${({ theme }) => theme.colors?.neutral['white']};
   font-size: ${({ $fontSize }) => $fontSize || '1rem'};
   font-style: normal;
   font-weight: 700;
   white-space: nowrap;
   display: flex;
   width: ${({ $width }) => $width || '11.75rem'};
-  height: ${({ $height }) => $height || '2.5rem'};
+  height: ${({ $height }) => $height || '2.75rem'};
   padding: 0.5rem;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
   border-radius: 0.25rem;
-  background: ${({ theme }) => theme.colors?.neutral['white']};
+  background: ${({ theme }) => theme.colors?.secondary['blue']};
   border: 0.1rem solid ${({ theme }) => theme.colors?.primary['01']};
   cursor: pointer;
   border: none;
@@ -77,7 +77,7 @@ const Tertiary = styled.button<IButtonProps>`
   white-space: nowrap;
   display: flex;
   width: ${({ $width }) => $width || '11.75rem'};
-  height: ${({ $height }) => $height || '2.5rem'};
+  height: ${({ $height }) => $height || '2.75rem'};
   padding: 0.5rem;
   justify-content: center;
   align-items: center;
@@ -85,7 +85,7 @@ const Tertiary = styled.button<IButtonProps>`
   border-radius: 0.25rem;
   background: ${({ theme }) => theme.colors?.neutral['white']};
   cursor: pointer;
-  border: none;
+  border: 2px solid ${({ theme }) => theme.colors?.secondary['blue']};
   transition: all 0.2s ease;
 
   &:hover {

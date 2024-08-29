@@ -3,6 +3,7 @@ import { ToastContainer } from 'react-toastify';
 import { ThemeProvider } from '@/core/providers/ThemeProvider';
 import '@/configs/styles/globalStyles.css';
 import { Header } from '@/presentation/components/Header/Header';
+import { LayoutContainer } from '@/presentation/components/LayoutContainer/styles';
 
 export default function RootLayout({
   children,
@@ -17,7 +18,7 @@ export default function RootLayout({
             <ToastContainer />
             <ThemeProvider>
               <Header />
-              {children}
+              <LayoutContainer>{children}</LayoutContainer>
             </ThemeProvider>
           </AppRouterCacheProvider>
         </body>
