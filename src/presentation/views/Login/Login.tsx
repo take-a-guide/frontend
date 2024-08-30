@@ -80,7 +80,7 @@ export const Login: React.FC = () => {
                 sx={{ justifyContent: 'center', marginTop: '.5rem' }}
               >
                 <Grid item>
-                  Don't have an account?
+                  {`Don't have an account?`}
                   <Link
                     href="/signup"
                     style={{
