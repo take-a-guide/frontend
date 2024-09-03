@@ -55,10 +55,29 @@ const InputContainer = styled.div`
   }
 `;
 
+const LeftSide = {
+  backgroundImage: 'url(https://picsum.photos/1920/1080)',
+  backgroundRepeat: 'no-repeat',
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+};
+
+const RightSide = {
+  my: 5,
+  mx: 4,
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  height: '100%',
+  padding: { md: '12px 48px', xs: 'unset' },
+};
+
 export const LoginStyles = {
   Title,
   LogoContainer,
   TagLogo,
   Back,
+  RightSide,
+  LeftSide,
   InputContainer,
 };
