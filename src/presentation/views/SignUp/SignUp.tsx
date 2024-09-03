@@ -1,49 +1,23 @@
 'use client';
 
-import { CssBaseline, Paper, Box, Grid, Typography } from '@mui/material';
+import { CssBaseline, Paper, Box, Grid } from '@mui/material';
 import Link from 'next/link';
 
-import { useState } from 'react';
 import { Button } from '@/presentation/components/Button/Button';
-import Image from 'next/image';
-import tagLogo from '@/presentation/assets/tag-logo.png';
-import arrowLeft from '@/presentation/assets/arrow-left.png';
 import { SignUpStyles } from '@/presentation/views/SignUp/styles';
-import { useRouter } from 'next/navigation';
 import tagLogoOrange from '@/presentation/assets/tag-logo-orange.png';
 import { useSignUp } from './hooks/useSignUp';
 import { Input } from '@/presentation/components/Input/Input';
 
 export const SignUp: React.FC = () => {
-  const [showSignUpOptions, setShowSignUpOptions] = useState(true);
   const { errors, handleInputChange, handleSubmit } = useSignUp();
 
   return (
     <Grid container component="main" sx={{ height: '100vh' }}>
-      <Grid
-        item
-        xs={false}
-        sm={4}
-        md={6}
-        sx={{
-          backgroundImage: 'url(https://picsum.photos/1920/1080)',
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      />
+      <Grid item xs={false} sm={4} md={6} sx={SignUpStyles.LeftSide} />
       <CssBaseline />
       <Grid item xs={12} sm={8} md={6} component={Paper} elevation={6}>
-        <Box
-          sx={{
-            my: 5,
-            mx: 4,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            padding: { md: '12px 48px', xs: 'unset' },
-          }}
-        >
+        <Box sx={SignUpStyles.RightSide}>
           <SignUpStyles.LogoContainer>
             <SignUpStyles.TagLogo src={tagLogoOrange} alt="Take a Guide Icon" />
 
