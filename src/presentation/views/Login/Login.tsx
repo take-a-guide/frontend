@@ -2,11 +2,10 @@
 
 import { CssBaseline, Paper, Box, Grid } from '@mui/material';
 import Link from 'next/link';
-import { useState } from 'react';
 import tagLogoOrange from '@/presentation/assets/tag-logo-orange.png';
 import { Button } from '@/presentation/components/Button/Button';
 import { LoginStyles } from '@/presentation/views/Login/styles';
-import { useLogin } from './hooks/useLogin';
+import { useLogin } from '@/presentation/views/Login/hooks/useLogin';
 import { Input } from '@/presentation/components/Input/Input';
 
 export const Login: React.FC = () => {
@@ -20,7 +19,6 @@ export const Login: React.FC = () => {
         <Box sx={LoginStyles.RightSide}>
           <LoginStyles.LogoContainer>
             <LoginStyles.TagLogo src={tagLogoOrange} alt="Take a Guide Icon" />
-
             <LoginStyles.Title>Login to your account</LoginStyles.Title>
           </LoginStyles.LogoContainer>
 
