@@ -12,14 +12,16 @@ export const Login: React.FC = () => {
   const { handleInputChange, handleSubmit } = useLogin();
 
   return (
-    <Grid container component="main" sx={{ height: '100vh' }}>
-      <Grid item xs={false} sm={4} md={6} sx={LoginStyles.LeftSide} />
-      <CssBaseline />
-      <Grid item xs={12} sm={8} md={6} component={Paper} elevation={6}>
-        <Box sx={LoginStyles.RightSide}>
+    <Grid
+      container
+      component="main"
+      sx={{ height: '100vh', justifyContent: 'center', alignItems: 'center' }}
+    >
+      <Grid item>
+        <LoginStyles.Box>
           <LoginStyles.LogoContainer>
             <LoginStyles.TagLogo src={tagLogoOrange} alt="Take a Guide Icon" />
-            <LoginStyles.Title>Login to your account</LoginStyles.Title>
+            <LoginStyles.Title>Entre em sua conta</LoginStyles.Title>
           </LoginStyles.LogoContainer>
 
           <Box
@@ -34,11 +36,11 @@ export const Login: React.FC = () => {
                 <Input
                   placeholder="Email"
                   onChange={handleInputChange}
-                  name="email"
+                  name="Email"
                   required
                 />
                 <Input
-                  placeholder="Password"
+                  placeholder="Senha"
                   onChange={handleInputChange}
                   type="password"
                   name="password"
@@ -52,10 +54,10 @@ export const Login: React.FC = () => {
 
               <Grid
                 container
-                sx={{ justifyContent: 'center', marginTop: '.5rem' }}
+                sx={{ justifyContent: 'center', margin: '2rem 0' }}
               >
                 <Grid item>
-                  {`Don't have an account?`}
+                  {`Não possui uma conta?`}
                   <Link
                     href="/signup"
                     style={{
@@ -63,13 +65,13 @@ export const Login: React.FC = () => {
                       marginLeft: '0.25rem',
                     }}
                   >
-                    {'Sign Up'}
+                    {'Cadastre-se'}
                   </Link>
                 </Grid>
               </Grid>
             </>
           </Box>
-        </Box>
+        </LoginStyles.Box>
       </Grid>
     </Grid>
   );

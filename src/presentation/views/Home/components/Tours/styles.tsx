@@ -3,10 +3,11 @@ import styled from '@emotion/styled';
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   gap: 3rem;
   padding: 5rem 0 2rem 0;
+  max-width: 1248px;
 `;
 
 const Content = styled.div`
@@ -23,8 +24,8 @@ const Content = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 1.75rem;
-  font-weight: 700;
+  font-size: 2rem;
+  font-weight: 500;
   color: ${({ theme }) => theme.colors.secondary['blue']};
 `;
 

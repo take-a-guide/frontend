@@ -1,13 +1,27 @@
 import styled from '@emotion/styled';
 import Image from 'next/image';
 
+const Box = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 3rem;
+  background: ${({ theme }) => theme.colors.neutral['white']};
+  border-radius: 0.25rem;
+  /* box-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25); */
+  border: 2px solid ${({ theme }) => theme.colors.neutral['gray-1']};
+  height: 40rem;
+  width: 30rem;
+`;
+
 const Title = styled.h1`
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: ${({ theme }) => theme.colors.secondary['blue']};
-  text-align: left;
+  text-align: center;
   margin: 0 0 0 0;
-  line-height: 32px;
-  font-weight: 700;
+  line-height: 2rem;
+  font-weight: 500;
 
   @media (max-width: 768px) {
     font-size: 1.5rem;
@@ -24,7 +38,7 @@ const LogoContainer = styled.div`
   display: flex;
   gap: 2rem;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   width: 100%;
 `;
@@ -46,13 +60,8 @@ const InputContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
   width: 100%;
   margin: 1rem 0 2rem 0;
-
-  > input {
-    width: 100%;
-  }
 `;
 
 const LeftSide = {
@@ -62,22 +71,12 @@ const LeftSide = {
   backgroundPosition: 'center',
 };
 
-const RightSide = {
-  my: 5,
-  mx: 4,
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  height: '100%',
-  padding: { md: '12px 48px', xs: 'unset' },
-};
-
 export const LoginStyles = {
   Title,
   LogoContainer,
   TagLogo,
   Back,
-  RightSide,
+  Box,
   LeftSide,
   InputContainer,
 };
