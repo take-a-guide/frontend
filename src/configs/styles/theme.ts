@@ -16,6 +16,7 @@ export const theme = {
       white: '#FFF',
       'gray-1': '#E7E7E7',
       'gray-2': '#eaecf0',
+      'gray-3': '#e5e5e5',
       black: '#000',
     },
     gradient: {
