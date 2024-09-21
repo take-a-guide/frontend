@@ -1,11 +1,10 @@
-import { HTMLInputTypeAttribute } from 'react';
+import { TextField } from '@mui/material';
 import { InputStyles } from './styles';
-import { error } from 'console';
 
 interface IInputProps {
   placeholder?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  type?: HTMLInputTypeAttribute;
+  type?: string;
   name?: string;
   required?: boolean;
   errorMessage?: string;
@@ -23,9 +22,10 @@ export const Input: React.FC<IInputProps> = ({
     <InputStyles.Container>
       <InputStyles.Input
         placeholder={placeholder}
+        // label={placeholder}
+        name={name}
         onChange={onChange}
         type={type || 'text'}
-        name={name}
         required={required}
       />
       {errorMessage && <span>{errorMessage}</span>}

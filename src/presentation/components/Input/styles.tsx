@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { TextField } from '@mui/material';
 import { roboto } from '@/configs/styles/globalStyles';
 
 interface IInputStyleProps {
@@ -11,7 +12,7 @@ interface IInputStyleProps {
   $padding?: string;
 }
 
-const Container = styled.div`
+const Container = styled.div<IInputStyleProps>`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -19,30 +20,25 @@ const Container = styled.div`
   width: 100%;
   gap: 0.5rem;
 
+  
   > span {
     color: ${({ theme }) => theme.colors.secondary['red']};
     font-size: 0.75rem;
   }
 `;
 
-const Input = styled.input<IInputStyleProps>`
+const Input = styled(TextField)<IInputStyleProps>`
   width: ${({ $width }) => $width || '100%'};
-  padding: ${({ $padding }) => $padding || '1rem 0.5rem'};
+  padding: ${({ $padding }) => $padding || '0.5rem'};
   height: ${({ $height }) => $height};
   font-size: ${({ $fontSize }) => $fontSize || '1rem'};
   color: ${({ $color, theme }) => $color || theme.colors.neutral['black']};
-  border: 1px solid
-    ${({ $borderColor, theme }) =>
-      $borderColor || theme.colors.neutral['gray-1']};
   border-radius: ${({ $borderRadius }) => $borderRadius || '0.25rem'};
   font-family: ${roboto};
 
-  &:hover {
-    cursor: ${({ type }) => (type === 'date' ? 'pointer' : 'text')};
-  }
-
-  &:focus {
-    border-color: ${({ theme }) => theme.colors.secondary['blue']};
+  &:focus,
+  &:active {
+    outline: ${({ theme }) => theme.colors.secondary['blue']};
   }
 `;
 

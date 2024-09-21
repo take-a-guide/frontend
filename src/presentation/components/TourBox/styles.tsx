@@ -8,13 +8,11 @@ const Container = styled.div`
   border-bottom-left-radius: 0.75rem;
   border-top-right-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
-  background: #ededed;
-  box-shadow: 1.25rem 1.25rem 3.75rem #ababab,
-    -1.25rem -1.25rem 3.75rem ${({ theme }) => theme.colors.neutral['white']};
+  background: ${({ theme }) => theme.colors.neutral['white']};
   overflow: hidden;
   min-width: 18.75rem;
-  border: 2px solid ${({ theme }) => theme.colors.neutral['gray-1']};
-  transition: box-shadow 0.2s ease-in-out;
+  border: 1px solid ${({ theme }) => theme.colors.neutral['gray-2']};
+  box-shadow: -1px 2px 2px -1px rgba(206, 206, 206, 0.75);
 
   @media (max-width: 310px) {
     min-width: unset;
@@ -23,8 +21,9 @@ const Container = styled.div`
 
   &:hover {
     cursor: pointer;
-    box-shadow: 0.5rem 0.5rem 1.5rem #cac9c9,
-      -1.25rem -1.25rem 3.75rem ${({ theme }) => theme.colors.neutral['white']};
+    &:hover {
+      ${({ theme }) => theme.colors.neutral['gray-3']};
+    }
   }
 
   img {
