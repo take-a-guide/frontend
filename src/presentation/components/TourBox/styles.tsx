@@ -11,7 +11,7 @@ const Container = styled.div`
   background: ${({ theme }) => theme.colors.neutral['white']};
   overflow: hidden;
   min-width: 18.75rem;
-  border: 1px solid #eaecf0;
+  border: 1px solid ${({ theme }) => theme.colors.neutral['gray-2']};
   box-shadow: -1px 2px 2px -1px rgba(206, 206, 206, 0.75);
 
   @media (max-width: 310px) {
@@ -22,7 +22,7 @@ const Container = styled.div`
   &:hover {
     cursor: pointer;
     &:hover {
-      box-shadow: 0.15rem 0rem 0.5rem #e5e5e5;
+      ${({ theme }) => theme.colors.neutral['gray-3']};
     }
   }
 

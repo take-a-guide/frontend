@@ -12,11 +12,7 @@ export const Login: React.FC = () => {
   const { handleInputChange, handleSubmit } = useLogin();
 
   return (
-    <Grid
-      container
-      component="main"
-      sx={{ height: '100vh', justifyContent: 'center', alignItems: 'center' }}
-    >
+    <LoginStyles.GridContainer>
       <Grid item>
         <LoginStyles.Box>
           <LoginStyles.LogoContainer>
@@ -59,7 +55,7 @@ export const Login: React.FC = () => {
                 <Grid item>
                   {`Não possui uma conta?`}
                   <Link
-                    href="/signup"
+                    href="/sign-up"
                     style={{
                       textDecoration: 'underline',
                       marginLeft: '0.25rem',
@@ -73,6 +69,6 @@ export const Login: React.FC = () => {
           </Box>
         </LoginStyles.Box>
       </Grid>
-    </Grid>
+    </LoginStyles.GridContainer>
   );
 };

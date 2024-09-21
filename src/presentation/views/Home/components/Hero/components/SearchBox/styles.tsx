@@ -8,7 +8,7 @@ const Container = styled.div`
   gap: 4rem;
   border-radius: 0.25rem;
   background: ${({ theme }) => theme.colors.neutral['white']};
-  border: 1px solid #eaecf0;
+  border: 1px solid ${({ theme }) => theme.colors.neutral['gray-2']};
   max-width: 30rem;
   padding: 2rem;
   min-height: 35rem;

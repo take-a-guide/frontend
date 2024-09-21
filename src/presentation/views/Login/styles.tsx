@@ -1,5 +1,12 @@
 import styled from '@emotion/styled';
 import Image from 'next/image';
+import { Grid } from '@mui/material';
+
+const GridContainer = styled(Grid)`
+  display: flex;
+  align-items: center;
+  align-items: center;
+`;
 
 const Box = styled.div`
   display: flex;
@@ -9,7 +16,6 @@ const Box = styled.div`
   padding: 0.75rem 3rem;
   background: ${({ theme }) => theme.colors.neutral['white']};
   border-radius: 0.25rem;
-  /* box-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25); */
   border: 2px solid ${({ theme }) => theme.colors.neutral['gray-1']};
   height: 40rem;
   width: 30rem;
@@ -72,6 +78,7 @@ const LeftSide = {
 };
 
 export const LoginStyles = {
+  GridContainer,
   Title,
   LogoContainer,
   TagLogo,

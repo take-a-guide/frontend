@@ -15,7 +15,7 @@ export const theme = {
     neutral: {
       white: '#FFF',
       'gray-1': '#E7E7E7',
-      'gray-2': '#C6C6C6',
+      'gray-2': '#eaecf0',
       black: '#000',
     },
     gradient: {

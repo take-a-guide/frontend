@@ -7,16 +7,11 @@ const Container = styled.div`
   align-items: center;
   gap: 2rem 0;
   border-radius: 0.25rem;
-  /* background: ${({ theme }) => theme.colors.neutral['white']}; */
-  background: ${({ theme }) => theme.colors.neutral['white']};
-  border: 1px solid #eaecf0;
+  background: ${({ theme }) => theme.colors.neutral['gray-3']};
+  border: 1px solid ${({ theme }) => theme.colors.neutral['gray-2']};
   width: 19rem;
   transition: box-shadow 0.2s ease-in;
   box-shadow: -1px 2px 2px -1px rgba(206, 206, 206, 0.75);
-
-  /* &:hover {
-    box-shadow: 0.15rem 0rem 0.5rem #e5e5e5;
-  } */
 `;
 
 const Content = styled.div`
