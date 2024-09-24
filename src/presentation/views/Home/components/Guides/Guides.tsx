@@ -1,5 +1,4 @@
 import { GuideBox } from '@/presentation/components/GuideBox/GuideBox';
-
 import { GuidesStyles } from './styles';
 import { guidesItems } from './utils/items';
 
@@ -9,7 +8,7 @@ export const Guides: React.FC = () => {
       <GuidesStyles.Title> Guias na sua região</GuidesStyles.Title>
       <GuidesStyles.Content>
         {guidesItems
-          .slice(0, 4)
+          .slice(0, 10)
           .map(
             (
               { image, location, title, lowestTourPrice, score, profileUrl },

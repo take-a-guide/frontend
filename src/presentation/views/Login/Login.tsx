@@ -13,7 +13,7 @@ export const Login: React.FC = () => {
 
   return (
     <LoginStyles.GridContainer>
-      <Grid item>
+      <Grid item justifyContent="center">
         <LoginStyles.Box>
           <LoginStyles.LogoContainer>
             <LoginStyles.TagLogo src={tagLogoOrange} alt="Take a Guide Icon" />

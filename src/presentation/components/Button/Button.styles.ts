@@ -30,7 +30,7 @@ const Primary = styled.button<IButtonProps>`
   transition: all 0.2s ease;
 
   &:hover {
-    filter: brightness(0.9);
+    filter: brightness(1.03);
   }
 
   &:disabled {
@@ -40,6 +40,35 @@ const Primary = styled.button<IButtonProps>`
 `;
 
 const Secondary = styled.button<IButtonProps>`
+  color: ${({ theme }) => theme.colors?.primary['01']};
+  font-size: ${({ $fontSize }) => $fontSize || '1rem'};
+  font-style: normal;
+  font-weight: 700;
+  white-space: nowrap;
+  display: flex;
+  width: ${({ $width }) => $width || '11.75rem'};
+  height: ${({ $height }) => $height || '2.75rem'};
+  padding: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  background: transparent;
+  cursor: pointer;
+  border: 2px solid ${({ theme }) => theme.colors?.primary['01']};
+  transition: all 0.2s ease;
+
+  &:hover {
+    filter: brightness(1.03);
+  }
+
+  &:disabled {
+    opacity: 0.8;
+    cursor: not-allowed;
+  }
+`;
+
+const Tertiary = styled.button<IButtonProps>`
   color: ${({ theme }) => theme.colors?.neutral['white']};
   font-size: ${({ $fontSize }) => $fontSize || '1rem'};
   font-style: normal;
@@ -60,36 +89,7 @@ const Secondary = styled.button<IButtonProps>`
   transition: all 0.2s ease;
 
   &:hover {
-    filter: brightness(0.9);
-  }
-
-  &:disabled {
-    opacity: 0.8;
-    cursor: not-allowed;
-  }
-`;
-
-const Tertiary = styled.button<IButtonProps>`
-  color: ${({ theme }) => theme.colors?.secondary['blue']};
-  font-size: ${({ $fontSize }) => $fontSize || '1rem'};
-  font-style: normal;
-  font-weight: 700;
-  white-space: nowrap;
-  display: flex;
-  width: ${({ $width }) => $width || '11.75rem'};
-  height: ${({ $height }) => $height || '2.75rem'};
-  padding: 0.5rem;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  background: ${({ theme }) => theme.colors?.neutral['white']};
-  cursor: pointer;
-  border: 2px solid ${({ theme }) => theme.colors?.secondary['blue']};
-  transition: all 0.2s ease;
-
-  &:hover {
-    filter: brightness(0.9);
+    filter: brightness(1.03);
   }
 
   &:disabled {

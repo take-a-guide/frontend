@@ -7,7 +7,7 @@ const Container = styled.div`
   justify-content: center;
   gap: 3rem;
   width: 100%;
-  padding: 5rem 0 8rem 0;
+  padding: 5rem 1rem 8rem 1rem;
   max-width: 1248px;
 `;
 
@@ -15,8 +15,9 @@ const Content = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 1rem;
+  justify-content: space-between;
+  gap: 2rem 1rem;
+  flex-wrap: wrap;
 `;
 
 const Title = styled.h1`

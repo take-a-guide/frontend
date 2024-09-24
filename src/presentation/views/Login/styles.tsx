@@ -5,7 +5,8 @@ import { Grid } from '@mui/material';
 const GridContainer = styled(Grid)`
   display: flex;
   align-items: center;
-  align-items: center;
+  justify-content: center;
+  height: 100vh;
 `;
 
 const Box = styled.div`

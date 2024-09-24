@@ -6,7 +6,7 @@ const Container = styled.div`
   align-items: flex-start;
   justify-content: center;
   gap: 3rem;
-  padding: 5rem 0 2rem 0;
+  padding: 5rem 1rem 2rem 1rem;
   max-width: 1248px;
 `;
 

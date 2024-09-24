@@ -7,9 +7,9 @@ const Container = styled.div`
   align-items: center;
   gap: 2rem 0;
   border-radius: 0.25rem;
-  background: ${({ theme }) => theme.colors.neutral['gray-3']};
+  background: ${({ theme }) => theme.colors.neutral['white']};
   border: 1px solid ${({ theme }) => theme.colors.neutral['gray-2']};
-  width: 19rem;
+  width: 14rem;
   transition: box-shadow 0.2s ease-in;
   box-shadow: -1px 2px 2px -1px rgba(206, 206, 206, 0.75);
 `;
@@ -19,8 +19,7 @@ const Content = styled.div`
 
   > img {
     width: 100%;
-    height: auto;
-    object-fit: contain;
+    height: 15rem;
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
   }
@@ -31,8 +30,8 @@ const Description = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: 1rem;
   gap: 1rem;
+  padding: 1rem;
 
   > span {
     text-transform: uppercase;
@@ -41,23 +40,36 @@ const Description = styled.div`
     color: #5a5a5a;
   }
 
-  > h1 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: ${({ theme }) => theme.colors.primary['900']};
-  }
-
-  > small {
+  > div {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
-    gap: 0.25rem;
-    font-size: 0.75rem;
-    color: ${({ theme }) => theme.colors.primary['01']};
-    font-weight: 700;
+    gap: 0.5rem;
 
-    > img {
-      margin-top: -0.075rem;
+    > p {
+      font-size: 0.875rem;
+      color: #5a5a5a;
+    }
+
+    > h1 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: ${({ theme }) => theme.colors.primary['900']};
+    }
+
+    > small {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.25rem;
+      font-size: 0.75rem;
+      color: ${({ theme }) => theme.colors.primary['01']};
+      font-weight: 700;
+
+      > img {
+        margin-top: -0.075rem;
+      }
     }
   }
 `;

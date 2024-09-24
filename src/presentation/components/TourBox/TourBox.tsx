@@ -15,7 +15,14 @@ export const TourBox: React.FC<ITourBoxProps> = ({ category, image, url }) => {
       <TourBoxStyles.Container>
         <Image src={image} alt="Tours" />
         <TourBoxStyles.RightSide>
-          <span>{category}</span>
+          <span>
+            {category}
+            <p>
+              Passeios urbanos, conheça a cidade de uma forma diferente conheça
+              a cidade de uma forma diferente. conheça a cidade de uma forma
+              diferente.
+            </p>
+          </span>
         </TourBoxStyles.RightSide>
       </TourBoxStyles.Container>
     </Link>
