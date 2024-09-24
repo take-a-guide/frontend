@@ -12,6 +12,7 @@ const Container = styled.div`
   max-width: 30rem;
   padding: 2rem;
   min-height: 35rem;
+  box-shadow: -1px 2px 2px -1px rgba(206, 206, 206, 0.75);
 
   @media (max-width: 899px) {
     max-width: unset;

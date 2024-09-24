@@ -2,8 +2,13 @@ import styled from '@emotion/styled';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const Container = styled.div`
-  background: ${({ theme }) => theme.colors.primary['01']};
+const Container = styled.div<{
+  $isScrolled: boolean;
+}>`
+  z-index: 1000;
+  background: ${({ theme, $isScrolled }) =>
+    $isScrolled ? theme.colors.neutral['gray-2'] : 'transparent'};
+  box-shadow: -1px 2px 2px -1px rgba(206, 206, 206, 0.75);
 `;
 
 const Content = styled.div`
@@ -30,7 +35,8 @@ const ItemsContainer = styled.div`
 `;
 
 const Item = styled(Link)`
-  color: ${({ theme }) => theme.colors.neutral['white']};
+  color: ${({ theme }) => theme.colors.secondary['blue']};
+  font-weight: 500;
   font-size: 0.875rem;
 `;
 

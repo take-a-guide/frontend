@@ -27,12 +27,14 @@ export const GuideBox: React.FC<IGuideBoxProps> = ({
           <Image src={image} alt={title} width={150} height={200} />
           <GuideBoxContainer.Description>
             <span>{location}</span>
-            <h1>{title}</h1>
-            <p>{`A partir de R$ ${lowestTourPrice.toFixed(2)}`}</p>
-            <small>
-              {score.toFixed(1)}{' '}
-              <Image src={star} alt="star" width={10} height={10} />
-            </small>
+            <div>
+              <h1>{title}</h1>
+              <p>{`A partir de R$ ${lowestTourPrice.toFixed(2)}`}</p>
+              <small>
+                {score.toFixed(1)}{' '}
+                <Image src={star} alt="star" width={10} height={10} />
+              </small>
+            </div>
           </GuideBoxContainer.Description>
         </GuideBoxContainer.Content>
       </GuideBoxContainer.Container>

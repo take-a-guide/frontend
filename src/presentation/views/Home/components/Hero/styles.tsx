@@ -10,7 +10,6 @@ const Container = styled.div`
   justify-content: center;
   font-family: ${roboto};
   gap: 0 0.5rem;
-  background: ${({ theme }) => theme.colors.primary['01']};
 `;
 
 const TripCoupleImage = styled(Image)`

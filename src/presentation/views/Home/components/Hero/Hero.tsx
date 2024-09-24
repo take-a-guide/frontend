@@ -16,7 +16,7 @@ export const Hero: React.FC = () => {
         <Grid item md={5} xs={12}>
           <SearchBox />
         </Grid>
-        <Grid item md={5} xs={12}>
+        <Grid item md={6} xs={12}>
           <HeroStyles.TripCoupleImage
             src={tripCouple}
             alt="Couple Travelling"
