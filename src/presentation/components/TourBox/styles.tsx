@@ -14,18 +14,29 @@ const Container = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.neutral['gray-2']};
   box-shadow: -1px 2px 2px -1px rgba(206, 206, 206, 0.75);
 
-  &:hover {
-    cursor: pointer;
-    &:hover {
-      ${({ theme }) => theme.colors.neutral['gray-3']};
-    }
-  }
-
   img {
     max-width: 15rem;
     width: 100%;
     height: 9rem;
     z-index: 3;
+  }
+
+  &:hover {
+    cursor: pointer;
+    ${({ theme }) => theme.colors.neutral['gray-3']};
+  }
+
+  @media (max-width: 899px) {
+    flex-direction: column;
+    padding: 0;
+    border-top-left-radius: 0.25rem;
+
+    > img {
+      max-width: 100%;
+      width: 100%;
+      height: 12rem;
+      object-fit: cover;
+    }
   }
 `;
 
@@ -52,6 +63,10 @@ const RightSide = styled.div`
       line-height: 1rem;
       text-transform: none;
     }
+  }
+
+  @media (max-width: 899px) {
+    padding: 1rem;
   }
 `;
 
