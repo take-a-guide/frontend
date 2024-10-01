@@ -10,6 +10,10 @@ const Container = styled.div`
   justify-content: center;
   font-family: ${roboto};
   gap: 0 0.5rem;
+
+  @media (max-width: 899px) {
+    height: 100dvh;
+  }
 `;
 
 const TripCoupleImage = styled(Image)`
