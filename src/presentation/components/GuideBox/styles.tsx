@@ -38,7 +38,7 @@ const Description = styled.div`
     text-transform: uppercase;
     font-size: 0.75rem;
     font-weight: bold;
-    color: #5a5a5a;
+    color: ${({ theme }) => theme.colors.neutral['dark-gray']};
     margin-bottom: 0.5rem;
   }
 
@@ -51,7 +51,7 @@ const Description = styled.div`
 
     > p {
       font-size: 0.75rem;
-      color: #5a5a5a;
+      color: ${({ theme }) => theme.colors.neutral['dark-gray']};
     }
 
     > h1 {
