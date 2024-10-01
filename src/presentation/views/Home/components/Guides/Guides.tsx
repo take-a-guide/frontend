@@ -8,7 +8,7 @@ export const Guides: React.FC = () => {
       <GuidesStyles.Title> Guias na sua região</GuidesStyles.Title>
       <GuidesStyles.Content>
         {guidesItems
-          .slice(0, 10)
+          .slice(0, 8)
           .map(
             (
               { image, location, title, lowestTourPrice, score, profileUrl },

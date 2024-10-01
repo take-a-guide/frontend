@@ -7,11 +7,12 @@ const Container = styled.div`
   align-items: center;
   gap: 2rem 0;
   border-radius: 0.25rem;
-  background: ${({ theme }) => theme.colors.neutral['white']};
-  border: 1px solid ${({ theme }) => theme.colors.neutral['gray-2']};
-  width: 14rem;
   transition: box-shadow 0.2s ease-in;
-  box-shadow: -1px 2px 2px -1px rgba(206, 206, 206, 0.75);
+  width: 18rem;
+
+  @media (max-width: 495px) {
+    width: 18rem;
+  }
 `;
 
 const Content = styled.div`
@@ -19,9 +20,9 @@ const Content = styled.div`
 
   > img {
     width: 100%;
-    height: 15rem;
-    border-top-left-radius: 0.25rem;
-    border-top-right-radius: 0.25rem;
+    height: auto;
+    max-height: 18rem;
+    border-radius: 0.25rem;
   }
 `;
 
@@ -30,14 +31,15 @@ const Description = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  gap: 1rem;
-  padding: 1rem;
+  gap: 0.25rem;
+  margin-top: 0.5rem;
 
   > span {
     text-transform: uppercase;
-    font-size: 0.825rem;
+    font-size: 0.75rem;
     font-weight: bold;
-    color: #5a5a5a;
+    color: ${({ theme }) => theme.colors.neutral['dark-gray']};
+    margin-bottom: 0.5rem;
   }
 
   > div {
@@ -45,15 +47,15 @@ const Description = styled.div`
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 0.25rem;
 
     > p {
-      font-size: 0.875rem;
-      color: #5a5a5a;
+      font-size: 0.75rem;
+      color: ${({ theme }) => theme.colors.neutral['dark-gray']};
     }
 
     > h1 {
-      font-size: 1.25rem;
+      font-size: 1rem;
       font-weight: 700;
       color: ${({ theme }) => theme.colors.primary['900']};
     }
