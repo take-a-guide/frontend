@@ -8,34 +8,26 @@ import tagLogoOrange from '@/presentation/assets/tag-logo-orange.png';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import { Hambuger } from '@/presentation/assets/Hamburger';
 
 export const Header: React.FC<{ noHeaderPaths: string[] }> = ({
   noHeaderPaths,
 }) => {
   const pathname = usePathname();
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      return window.scrollY > 60 ? setIsScrolled(true) : setIsScrolled(false);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  useEffect(() => {}, []);
 
   return (
     <>
       {noHeaderPaths.includes(pathname) ? null : (
-        <HeaderStyles.Container $isScrolled={isScrolled}>
+        <HeaderStyles.Container>
           <HeaderStyles.Content>
             <Link href="/">
               <HeaderStyles.TagLogo src={tagLogoOrange} alt="Tag logo" />
             </Link>
-            <HeaderStyles.ItemsContainer>
+
+            <HeaderStyles.ItemsContainer $isHamburgerOpen={isHamburgerOpen}>
               {items.map(({ label, target, url }) => (
                 <HeaderStyles.Item key={label} href={url} target={target}>
                   {label}
@@ -54,6 +46,12 @@ export const Header: React.FC<{ noHeaderPaths: string[] }> = ({
                 </Link>
               </HeaderStyles.ButtonsContainer>
             </HeaderStyles.ItemsContainer>
+
+            <HeaderStyles.HamburgerContainer
+              onClick={() => setIsHamburgerOpen(!isHamburgerOpen)}
+            >
+              <Hambuger />
+            </HeaderStyles.HamburgerContainer>
           </HeaderStyles.Content>
         </HeaderStyles.Container>
       )}
