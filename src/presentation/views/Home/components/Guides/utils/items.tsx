@@ -4,7 +4,7 @@ export const guidesItems = [
   {
     image: train,
     location: 'curitiba',
-    title: 'Nature Tour',
+    title: 'John Doe',
     lowestTourPrice: 70.91,
     score: 5,
     profileUrl: 'https://example.com/nature/6130',
@@ -12,7 +12,7 @@ export const guidesItems = [
   {
     image: train,
     location: 'curitiba',
-    title: 'Nature Tour',
+    title: 'John Doe',
     lowestTourPrice: 70.45,
     score: 5,
     profileUrl: 'https://example.com/nature/1167',
@@ -20,7 +20,7 @@ export const guidesItems = [
   {
     image: train,
     location: 'curitiba',
-    title: 'Nature Tour',
+    title: 'John Doe',
     lowestTourPrice: 52.99,
     score: 5,
     profileUrl: 'https://example.com/nature/8357',
@@ -28,7 +28,7 @@ export const guidesItems = [
   {
     image: train,
     location: 'curitiba',
-    title: 'Nature Tour',
+    title: 'John Doe',
     lowestTourPrice: 60.08,
     score: 5,
     profileUrl: 'https://example.com/nature/5080',
@@ -36,7 +36,7 @@ export const guidesItems = [
   {
     image: train,
     location: 'curitiba',
-    title: 'Nature Tour',
+    title: 'John Doe',
     lowestTourPrice: 56.69,
     score: 5,
     profileUrl: 'https://example.com/nature/9829',
@@ -44,7 +44,7 @@ export const guidesItems = [
   {
     image: train,
     location: 'curitiba',
-    title: 'Nature Tour',
+    title: 'John Doe',
     lowestTourPrice: 72.04,
     score: 5,
     profileUrl: 'https://example.com/nature/3600',
@@ -52,7 +52,7 @@ export const guidesItems = [
   {
     image: train,
     location: 'curitiba',
-    title: 'Nature Tour',
+    title: 'John Doe',
     lowestTourPrice: 72.98,
     score: 5,
     profileUrl: 'https://example.com/nature/2648',
@@ -60,7 +60,7 @@ export const guidesItems = [
   {
     image: train,
     location: 'curitiba',
-    title: 'Nature Tour',
+    title: 'John Doe',
     lowestTourPrice: 66.97,
     score: 5,
     profileUrl: 'https://example.com/nature/4976',
@@ -68,7 +68,7 @@ export const guidesItems = [
   {
     image: train,
     location: 'curitiba',
-    title: 'Nature Tour',
+    title: 'John Doe',
     lowestTourPrice: 64.15,
     score: 5,
     profileUrl: 'https://example.com/nature/8712',
@@ -76,7 +76,7 @@ export const guidesItems = [
   {
     image: train,
     location: 'curitiba',
-    title: 'Nature Tour',
+    title: 'John Doe',
     lowestTourPrice: 64.94,
     score: 5,
     profileUrl: 'https://example.com/nature/2922',
@@ -84,7 +84,7 @@ export const guidesItems = [
   {
     image: train,
     location: 'curitiba',
-    title: 'Nature Tour',
+    title: 'John Doe',
     lowestTourPrice: 54.01,
     score: 5,
     profileUrl: 'https://example.com/nature/9778',
@@ -92,7 +92,7 @@ export const guidesItems = [
   {
     image: train,
     location: 'curitiba',
-    title: 'Nature Tour',
+    title: 'John Doe',
     lowestTourPrice: 74.23,
     score: 5,
     profileUrl: 'https://example.com/nature/8319',
@@ -100,7 +100,7 @@ export const guidesItems = [
   {
     image: train,
     location: 'curitiba',
-    title: 'Nature Tour',
+    title: 'John Doe',
     lowestTourPrice: 74.62,
     score: 5,
     profileUrl: 'https://example.com/nature/3770',
@@ -108,7 +108,7 @@ export const guidesItems = [
   {
     image: train,
     location: 'curitiba',
-    title: 'Nature Tour',
+    title: 'John Doe',
     lowestTourPrice: 62.67,
     score: 5,
     profileUrl: 'https://example.com/nature/8594',
@@ -116,7 +116,7 @@ export const guidesItems = [
   {
     image: train,
     location: 'curitiba',
-    title: 'Nature Tour',
+    title: 'John Doe',
     lowestTourPrice: 57.99,
     score: 5,
     profileUrl: 'https://example.com/nature/8244',
@@ -124,7 +124,7 @@ export const guidesItems = [
   {
     image: train,
     location: 'curitiba',
-    title: 'Nature Tour',
+    title: 'John Doe',
     lowestTourPrice: 60.41,
     score: 5,
     profileUrl: 'https://example.com/nature/3831',
@@ -132,7 +132,7 @@ export const guidesItems = [
   {
     image: train,
     location: 'curitiba',
-    title: 'Nature Tour',
+    title: 'John Doe',
     lowestTourPrice: 58.3,
     score: 5,
     profileUrl: 'https://example.com/nature/8079',
@@ -140,7 +140,7 @@ export const guidesItems = [
   {
     image: train,
     location: 'curitiba',
-    title: 'Nature Tour',
+    title: 'John Doe',
     lowestTourPrice: 57.98,
     score: 5,
     profileUrl: 'https://example.com/nature/1413',
@@ -148,7 +148,7 @@ export const guidesItems = [
   {
     image: train,
     location: 'curitiba',
-    title: 'Nature Tour',
+    title: 'John Doe',
     lowestTourPrice: 79.06,
     score: 5,
     profileUrl: 'https://example.com/nature/7227',
@@ -156,7 +156,7 @@ export const guidesItems = [
   {
     image: train,
     location: 'curitiba',
-    title: 'Nature Tour',
+    title: 'John Doe',
     lowestTourPrice: 61.73,
     score: 5,
     profileUrl: 'https://example.com/nature/2896',
