@@ -12,7 +12,8 @@ const Container = styled.div`
   gap: 0 0.5rem;
 
   @media (max-width: 899px) {
-    height: 100dvh;
+    padding: 2rem 0;
+    height: auto;
   }
 `;
 

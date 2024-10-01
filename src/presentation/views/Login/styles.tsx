@@ -20,6 +20,11 @@ const Box = styled.div`
   border: 2px solid ${({ theme }) => theme.colors.neutral['gray-1']};
   height: 40rem;
   width: 30rem;
+
+  @media (max-width: 768px) {
+    background: transparent;
+    border: none;
+  }
 `;
 
 const Title = styled.h1`

@@ -15,7 +15,7 @@ const Container = styled.div`
 
 const Content = styled.div`
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   max-width: 1248px;
   padding: 0 1rem;
@@ -39,9 +39,10 @@ const TagLogo = styled(Image)`
 
 const ItemsContainer = styled.div<IHeaderProps>`
   display: flex;
-  justify-content: center;
-  gap: 1.5rem;
+  justify-content: flex-end;
   align-items: center;
+  gap: 1.5rem;
+  width: 100%;
 
   @media (max-width: 899px) {
     display: ${({ $isHamburgerOpen }) => ($isHamburgerOpen ? 'flex' : 'none')};
