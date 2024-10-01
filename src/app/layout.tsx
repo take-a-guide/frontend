@@ -3,6 +3,8 @@ import { ToastContainer } from 'react-toastify';
 import { ThemeProvider } from '@/core/providers/ThemeProvider';
 import '@/configs/styles/globalStyles.css';
 
+import { LayoutContainer } from '@/presentation/components/LayoutContainer/LayoutContainer';
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -14,7 +16,9 @@ export default function RootLayout({
         <body suppressHydrationWarning={true}>
           <AppRouterCacheProvider options={{ enableCssLayer: true }}>
             <ToastContainer />
-            <ThemeProvider>{children}</ThemeProvider>
+            <ThemeProvider>
+              <LayoutContainer>{children}</LayoutContainer>
+            </ThemeProvider>
           </AppRouterCacheProvider>
         </body>
       </html>
