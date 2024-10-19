@@ -65,8 +65,7 @@ export const useSignUp = () => {
     return isEmailValid && isCpfValid && isPhoneValid && isPasswordValid;
   };
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
+  const handleSubmit = () => {
     if (validateForm()) {
       console.log(formData);
     }
