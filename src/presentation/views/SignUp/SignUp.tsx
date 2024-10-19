@@ -98,9 +98,11 @@ export const SignUp: React.FC = () => {
             <Grid item xs={12} marginTop={2}>
               <Button.Primary
                 $width="100%"
-                onClick={
-                  isFirstStep ? () => setIsFirstStep(false) : handleSubmit
-                }
+                onClick={(event: React.FormEvent<HTMLFormElement>) => {
+                  isFirstStep
+                    ? () => setIsFirstStep(false)
+                    : handleSubmit(event);
+                }}
               >
                 {buttonText}
               </Button.Primary>
