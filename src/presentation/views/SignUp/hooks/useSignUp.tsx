@@ -57,10 +57,10 @@ export const useSignUp = () => {
 
   const validateForm = () => {
     const { email, cpf, phone, password } = formData;
-    const isEmailValid = validateField('email');
-    const isCpfValid = validateField('cpf');
-    const isPhoneValid = validateField('phone');
-    const isPasswordValid = validateField('password');
+    const isEmailValid = validateField({ name: 'email' });
+    const isCpfValid = validateField({ name: 'cpf' });
+    const isPhoneValid = validateField({ name: 'phone' });
+    const isPasswordValid = validateField({ name: 'password' });
 
     return isEmailValid && isCpfValid && isPhoneValid && isPasswordValid;
   };
