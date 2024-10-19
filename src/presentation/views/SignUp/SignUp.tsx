@@ -27,7 +27,7 @@ export const SignUp: React.FC = () => {
 
             <SignUpStyles.Title>Faça seu cadastro</SignUpStyles.Title>
           </SignUpStyles.LogoContainer>
-          <Box component="form" sx={{ mt: 1 }} width="100%">
+          <Box sx={{ mt: 1 }} width="100%">
             <SignUpStyles.InputContainer>
               {isFirstStep ? (
                 <>
