@@ -1,6 +1,6 @@
 'use client';
 
-import { CssBaseline, Paper, Box, Grid } from '@mui/material';
+import { Box, Grid } from '@mui/material';
 import Link from 'next/link';
 import tagLogoOrange from '@/presentation/assets/tag-logo-orange.png';
 import { Button } from '@/presentation/components/Button/Button';
@@ -27,45 +27,42 @@ export const Login: React.FC = () => {
             sx={{ mt: 1 }}
             width="100%"
           >
-            <>
-              <LoginStyles.InputContainer>
-                <Input
-                  placeholder="Email"
-                  onChange={handleInputChange}
-                  name="Email"
-                  required
-                />
-                <Input
-                  placeholder="Senha"
-                  onChange={handleInputChange}
-                  type="password"
-                  name="password"
-                  required
-                />
-              </LoginStyles.InputContainer>
+            <LoginStyles.InputContainer>
+              <Input
+                placeholder="Email"
+                onChange={handleInputChange}
+                name="Email"
+                required
+              />
+              <Input
+                placeholder="Senha"
+                onChange={handleInputChange}
+                type="password"
+                name="password"
+                required
+              />
+            </LoginStyles.InputContainer>
 
-              <Grid item xs={12} marginTop={2}>
-                <Button.Primary $width="100%">Login</Button.Primary>
-              </Grid>
+            <Grid item xs={12} marginTop={2}>
+              <Button.Primary $width="100%" $height="3rem">
+                Login
+              </Button.Primary>
+            </Grid>
 
-              <Grid
-                container
-                sx={{ justifyContent: 'center', margin: '2rem 0' }}
-              >
-                <Grid item>
-                  {`Não possui uma conta?`}
-                  <Link
-                    href="/sign-up"
-                    style={{
-                      textDecoration: 'underline',
-                      marginLeft: '0.25rem',
-                    }}
-                  >
-                    {'Cadastre-se'}
-                  </Link>
-                </Grid>
+            <Grid container sx={{ justifyContent: 'center', margin: '2rem 0' }}>
+              <Grid item>
+                {`Não possui uma conta?`}
+                <Link
+                  href="/sign-up"
+                  style={{
+                    textDecoration: 'underline',
+                    marginLeft: '0.25rem',
+                  }}
+                >
+                  {'Cadastre-se'}
+                </Link>
               </Grid>
-            </>
+            </Grid>
           </Box>
         </LoginStyles.Box>
       </Grid>

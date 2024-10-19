@@ -18,33 +18,51 @@ export const useSignUp = () => {
     password: '',
   });
 
+  const validateField = ({ name }: { name: string }) => {
+    const { email, cpf, phone, password } = formData;
+    let error = '';
+
+    switch (name) {
+      case 'email':
+        if (!emailRegex.test(email)) {
+          error = 'Email inválido';
+        }
+        break;
+      case 'cpf':
+        if (!cpfRegex.test(cpf)) {
+          error = 'CPF inválido';
+        }
+        break;
+      case 'phone':
+        if (!phoneRegex.test(phone)) {
+          error = 'Telefone inválido';
+        }
+        break;
+      case 'password':
+        if (password.length < 8) {
+          error = 'A senha deve conter pelo menos 8 caracteres';
+        }
+        break;
+      default:
+        break;
+    }
+
+    setErrors(prevErrors => ({
+      ...prevErrors,
+      [name]: error,
+    }));
+
+    return error === '';
+  };
+
   const validateForm = () => {
     const { email, cpf, phone, password } = formData;
-    const validatedErrors = {
-      email: '',
-      cpf: '',
-      phone: '',
-      password: '',
-    };
+    const isEmailValid = validateField('email', email);
+    const isCpfValid = validateField('cpf', cpf);
+    const isPhoneValid = validateField('phone', phone);
+    const isPasswordValid = validateField('password', password);
 
-    if (!emailRegex.test(email)) {
-      validatedErrors.email = 'Email inválido';
-    }
-
-    if (!cpfRegex.test(cpf)) {
-      validatedErrors.cpf = 'CPF inválido';
-    }
-
-    if (!phoneRegex.test(phone)) {
-      validatedErrors.phone = 'Telefone inválido';
-    }
-
-    if (password.length < 8) {
-      validatedErrors.password = 'A senha deve conter pelo menos 8 caracteres';
-    }
-
-    setErrors(validatedErrors);
-    return Object.keys(errors).length === 0;
+    return isEmailValid && isCpfValid && isPhoneValid && isPasswordValid;
   };
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -67,5 +85,7 @@ export const useSignUp = () => {
     errors,
     handleSubmit,
     handleInputChange,
+    validateField,
+    validateForm,
   };
 };
