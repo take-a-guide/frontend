@@ -99,7 +99,7 @@ export const SignUp: React.FC = () => {
               <Button.Primary
                 $width="100%"
                 onClick={() => {
-                  isFirstStep ? () => setIsFirstStep(false) : handleSubmit;
+                  isFirstStep ? setIsFirstStep(false) : handleSubmit;
                 }}
               >
                 {buttonText}

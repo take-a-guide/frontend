@@ -18,6 +18,15 @@ export const useSignUp = () => {
     password: '',
   });
 
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = event.target;
+
+    setFormData(prevFormData => ({
+      ...prevFormData,
+      [name]: value,
+    }));
+  };
+
   const validateField = ({ name }: { name: string }) => {
     const { email, cpf, phone, password } = formData;
     let error = '';
@@ -57,6 +66,7 @@ export const useSignUp = () => {
 
   const validateForm = () => {
     const { email, cpf, phone, password } = formData;
+
     const isEmailValid = validateField({ name: 'email' });
     const isCpfValid = validateField({ name: 'cpf' });
     const isPhoneValid = validateField({ name: 'phone' });
@@ -69,14 +79,6 @@ export const useSignUp = () => {
     if (validateForm()) {
       console.log(formData);
     }
-  };
-
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = event.target;
-    setFormData(prevFormData => ({
-      ...prevFormData,
-      [name]: value,
-    }));
   };
 
   return {
