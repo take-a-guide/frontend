@@ -7,6 +7,7 @@ interface IInputProps {
   onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void;
   type?: string;
   name?: string;
+  value?: string;
   required?: boolean;
   errorMessage?: string;
   $padding?: string;
@@ -21,6 +22,7 @@ export const Input: React.FC<IInputProps> = ({
   required,
   errorMessage,
   $padding,
+  value,
 }) => {
   return (
     <InputStyles.Container>
@@ -28,6 +30,7 @@ export const Input: React.FC<IInputProps> = ({
         placeholder={placeholder}
         // label={placeholder}
         name={name}
+        value={value}
         onChange={onChange}
         onBlur={onBlur}
         type={type || 'text'}

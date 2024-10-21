@@ -10,14 +10,15 @@ import { useState } from 'react';
 import { Hambuger } from '@/presentation/assets/Hamburger';
 import { UserDropdown } from './UserDropdown/UserDropdown';
 import { useEffect, useRef } from 'react';
+import { useUserDataState } from '@/core/recoil/states/user';
 
 export const Header: React.FC<{ noHeaderPaths: string[] }> = ({
   noHeaderPaths,
 }) => {
   const pathname = usePathname();
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isUserDropdownOpen, setIsUserDropdownOpen] = useState(false);
+  const { userData } = useUserDataState();
   const userDropdownRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -52,8 +53,9 @@ export const Header: React.FC<{ noHeaderPaths: string[] }> = ({
                 </HeaderStyles.Item>
               ))}
 
-              {isAuthenticated ? (
+              {userData.isLogged ? (
                 <UserDropdown
+                  $userName={userData.name}
                   $isOpen={isUserDropdownOpen}
                   $ref={userDropdownRef}
                   onClick={() => {

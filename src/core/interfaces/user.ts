@@ -3,8 +3,9 @@ export interface UserData {
   name: string;
   email: string;
   phone: string;
-  user_type_id: number;
   isLogged: boolean;
+  user_type_id: number;
+  deleted_at: string | null;
 }
 
 export interface UserLoginData {
@@ -24,7 +25,9 @@ export interface UserUpdateData {
   cpf: string;
   name?: string | null;
   email?: string | null;
+  password?: string | null;
   phone?: string | null;
+  type?: number | null;
 }
 
 export interface UserDeleteData {

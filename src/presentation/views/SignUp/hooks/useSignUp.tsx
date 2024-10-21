@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { emailRegex, cpfRegex, phoneRegex } from '@/core/utils/regex';
 import { useRouter } from 'next/navigation';
 import { userServices } from '@/core/services/user';
+import { useToast } from '@/core/hooks/useToast';
 
 export const useSignUp = () => {
   const [formData, setFormData] = useState({
@@ -22,6 +23,7 @@ export const useSignUp = () => {
     password: '',
   });
 
+  const { toast } = useToast();
   const [isFirstStep, setIsFirstStep] = useState(true);
 
   const router = useRouter();
@@ -128,10 +130,17 @@ export const useSignUp = () => {
     if (validateSecondStep()) {
       try {
         const response = await userServices.signUp(dataTobeSent);
+        toast({
+          title: 'Cadastro realizado com sucesso',
+          type: 'success',
+        });
         router.push('/login');
         return response;
       } catch (error) {
-        console.log('error', error);
+        toast({
+          title: 'Erro ao realizar cadastro',
+          type: 'error',
+        });
         return;
       }
     } else {
