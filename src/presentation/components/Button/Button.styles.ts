@@ -7,7 +7,7 @@ export interface IButtonProps {
   $height?: string;
   $fontSize?: string;
   children: React.ReactNode;
-  onClick?: () => void;
+  onClick?: (() => void) | ((e: React.MouseEvent<HTMLButtonElement>) => void);
 }
 
 const Primary = styled.button<IButtonProps>`

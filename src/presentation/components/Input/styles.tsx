@@ -31,7 +31,7 @@ const Input = styled(TextField)<IInputStyleProps>`
   padding: ${({ $padding }) => $padding};
   height: ${({ $height }) => $height};
   font-size: ${({ $fontSize }) => $fontSize || '1rem'};
-  color: ${({ $color, theme }) => $color || theme.colors.neutral['black']};
+  color: ${({ $color, theme }) => $color || theme.colors.secondary['blue']};
   border-radius: ${({ $borderRadius }) => $borderRadius || '0.75rem'};
   font-family: ${roboto};
 

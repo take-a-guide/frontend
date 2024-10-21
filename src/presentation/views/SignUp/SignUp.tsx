@@ -12,9 +12,14 @@ import { useSignUp } from './hooks/useSignUp';
 import { Input } from '@/presentation/components/Input/Input';
 
 export const SignUp: React.FC = () => {
-  const { errors, validateField, handleInputChange, handleSubmit } =
-    useSignUp();
-  const [isFirstStep, setIsFirstStep] = useState(true);
+  const {
+    errors,
+    validateField,
+    handleInputChange,
+    handleFirstStep,
+    handleSubmit,
+    isFirstStep,
+  } = useSignUp();
 
   const buttonText = isFirstStep ? 'Continuar' : 'Cadastrar';
 
@@ -99,7 +104,7 @@ export const SignUp: React.FC = () => {
               <Button.Primary
                 $width="100%"
                 onClick={() => {
-                  isFirstStep ? setIsFirstStep(false) : handleSubmit;
+                  isFirstStep ? handleFirstStep() : handleSubmit();
                 }}
               >
                 {buttonText}
@@ -108,7 +113,7 @@ export const SignUp: React.FC = () => {
 
             <Grid
               container
-              sx={{ justifyContent: 'center', marginTop: '.5rem' }}
+              sx={{ justifyContent: 'center', marginTop: '2rem' }}
             >
               <Grid item>
                 Já possui uma conta?

@@ -7,6 +7,7 @@ import { Button } from '@/presentation/components/Button/Button';
 import { LoginStyles } from '@/presentation/views/Login/styles';
 import { useLogin } from '@/presentation/views/Login/hooks/useLogin';
 import { Input } from '@/presentation/components/Input/Input';
+import React from 'react';
 
 export const Login: React.FC = () => {
   const { handleInputChange, handleSubmit } = useLogin();
@@ -20,18 +21,12 @@ export const Login: React.FC = () => {
             <LoginStyles.Title>Entre em sua conta</LoginStyles.Title>
           </LoginStyles.LogoContainer>
 
-          <Box
-            component="form"
-            noValidate
-            onSubmit={handleSubmit}
-            sx={{ mt: 1 }}
-            width="100%"
-          >
+          <Box component="form" width="100%">
             <LoginStyles.InputContainer>
               <Input
                 placeholder="Email"
                 onChange={handleInputChange}
-                name="Email"
+                name="email"
                 required
               />
               <Input
@@ -44,7 +39,13 @@ export const Login: React.FC = () => {
             </LoginStyles.InputContainer>
 
             <Grid item xs={12} marginTop={2}>
-              <Button.Primary $width="100%" $height="3rem">
+              <Button.Primary
+                $width="100%"
+                $height="3rem"
+                onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) =>
+                  handleSubmit(e)
+                }
+              >
                 Login
               </Button.Primary>
             </Grid>

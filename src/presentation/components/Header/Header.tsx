@@ -16,7 +16,7 @@ export const Header: React.FC<{ noHeaderPaths: string[] }> = ({
 }) => {
   const pathname = usePathname();
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
-  const [isAuthenticated, setIsAuthenticated] = useState(true);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isUserDropdownOpen, setIsUserDropdownOpen] = useState(false);
   const userDropdownRef = useRef<HTMLDivElement | null>(null);
 
@@ -29,7 +29,6 @@ export const Header: React.FC<{ noHeaderPaths: string[] }> = ({
         setIsUserDropdownOpen(false);
       }
     };
-
     document.addEventListener('mousedown', handleClickOutside);
 
     return () => {
@@ -59,7 +58,6 @@ export const Header: React.FC<{ noHeaderPaths: string[] }> = ({
                   $ref={userDropdownRef}
                   onClick={() => {
                     setIsUserDropdownOpen(!isUserDropdownOpen);
-                    console.log('clicked');
                   }}
                 />
               ) : (

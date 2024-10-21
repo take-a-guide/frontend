@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 const GeneralContainer = styled.div`
   position: relative;
-  width: 5rem;
+  width: 10rem;
 `;
 
 const ButtonContainer = styled.div<{ $isOpen: boolean | undefined }>`
